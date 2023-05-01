@@ -12,7 +12,7 @@ This repository contains a set of AI functions for Google Sheets, which enables 
 
 ## Quick Start
 - Make a copy of the publicly available Google Spreadsheet: https://docs.google.com/spreadsheets/d/1Rm3_S_U1Ebsb8E6ajihRjkGBJgaUDRNbnosalxlIwas/edit?usp=sharing
-- Paste your key into the yellow cell on the KeySheets tab.
+- Paste your OpenAI API key into the yellow cell on the KeySheets tab.
 ![image](https://user-images.githubusercontent.com/122757410/235488835-f5d07f93-67e1-4093-a300-b6b2f06e3c4c.png)
 
 
