@@ -68,6 +68,11 @@ For detailed information on each function's usage and parameters, refer to the c
 
 In addition to entering your requests directly into the sheet, you can also make use of the custom sidebar to interact with the AI. To use the sidebar, simply open it by clicking on 'AI Functions' in the menu bar. Once open, fill out the form with the desired function, model, input cell, precontext, postcontext, and output cell. Choose from various precontext and postcontext options to provide the AI with additional instructions. After filling out the form, click on the 'Run Function' button. The function will then execute, and the result will be written to the specified output cell. The sidebar provides a user-friendly interface to interact with the AI, making it even easier to work with your data and analyze it in various ways.
 
+![image](https://user-images.githubusercontent.com/122757410/235489013-250a5495-c37e-40f4-84be-b21265de2ea1.png)
+And click Show Sidebar which will open the form on the right side of the window.
+![image](https://user-images.githubusercontent.com/122757410/235489155-b00fd5d5-ad9c-4ca1-bf39-13b5c3316929.png)
+
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
