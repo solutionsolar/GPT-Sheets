@@ -11,7 +11,7 @@ This repository contains a set of AI functions for Google Sheets, which enables 
 - [License](#license)
 
 - Publicly available Google Sheet you can make a copy of: https://docs.google.com/spreadsheets/d/1Rm3_S_U1Ebsb8E6ajihRjkGBJgaUDRNbnosalxlIwas/edit?usp=sharing
-- 
+
 ## Installation
 
 1. Open a Google Sheets document.
