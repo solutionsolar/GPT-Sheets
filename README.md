@@ -16,7 +16,8 @@ This repository contains a set of AI functions for Google Sheets, which enables 
 2. Click on `Extensions` in the menu bar.
 3. Choose `Apps Script`.
 4. Copy and paste the code from this repository into the `Code.gs` file.
-5. Replace `SECRET_KEY` with your OpenAI API key.
+5. Replace `SECRET_KEY` with your OpenAI API key. Or paste your key into the yellow cell on the KeySheets tab.
+![image](https://user-images.githubusercontent.com/122757410/235488835-f5d07f93-67e1-4093-a300-b6b2f06e3c4c.png)
 6. Save the script by clicking on the floppy disk icon or pressing `Ctrl + S`.
 7. Refresh your Google Sheets document.
 
