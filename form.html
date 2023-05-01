@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <style>
+      input, button, label { margin-top: 10px; display: block; }
+    </style>
+  </head>
+  <body>
+    <h3>AI Functions</h3>
+    <form id="aiForm">
+      <label for="functionName">Function:</label>
+      <select id="functionName">
+        <option value="Direct">Call Model Directly</option>
+        <option value="Bulletize">Bulletize</option>
+        <option value="Summarize">Summarize</option>
+        <option value="Detail">Detail</option>
+        <option value="Expand">Expand</option>
+        <option value="Analyze">Analyze</option>
+        <option value="Categorize">Categorize</option>
+        <option value="Sentiment">Sentiment Analysis</option>
+        <option value="FormulaHelper">Formula Helper</option>
+      </select>
+
+    <label for="modelName">Model:</label>
+      <select id="modelName">
+        <option value="Davinci3">text-davinci-003</option>
+        <option value="Turbo">gpt-3.5-turbo</option>
+        <option value="GPT4">gpt-4</option>
+      </select>
+      
+        <label for="text">Input Cell (e.g., A1):</label>
+        <input type="text" id="text" required>
+
+
+      <label for="precontext">Precontext (optional):</label>
+      <select id="precontext">
+        <option value="">None</option>
+        <option value="Sort the following data in ascending order:">Ascending Sort</option>
+        <option value="Sort the following data in descending order:">Descending Sort</option>
+        <option value="Calculate the average of the following numbers:">Calculate Average</option>
+        <option value="Find the sum of the following numbers:">Calculate Sum</option>
+        <option value="Find the minimum value among the following numbers:">Find Minimum</option>
+        <option value="Find the maximum value among the following numbers:">Find Maximum</option>
+        <option value="Calculate the percentage change between the following numbers:">Percentage Change</option>
+        <option value="Convert the following values to USD:">Currency Conversion to USD</option>
+        <option value="Analyze the following dataset and identify the trend:">Identify Trend</option>
+        <option value="Compare the performance of the following data points:">Compare Performance</option>
+      </select>
+
+      <label for="postcontext">Postcontext (optional):</label>
+      <select id="postcontext">
+        <option value="">None</option>
+        <option value="What conclusions can be drawn from the result?">Draw Conclusions</option>
+        <option value="How does the result impact the overall dataset?">Result Impact</option>
+        <option value="What recommendations can be made based on the result?">Make Recommendations</option>
+        <option value="What potential issues may arise from the result?">Identify Potential Issues</option>
+        <option value="What additional information would be helpful to further analyze the result?">Additional Information</option>
+        <option value="How does the result compare to industry standards or benchmarks?">Compare to Industry Standards</option>
+        <option value="What are the implications of the result for future decision-making?">Future Decision-making</option>
+        <option value="How can the result be visualized for better understanding?">Visualize Result</option>
+        <option value="What other factors should be considered when interpreting the result?">Consider Other Factors</option>
+        <option value="What are the potential causes of the observed result?">Potential Causes</option>
+      </select>
+
+        <label for="cell">Output Cell (e.g., A1):</label>
+        <input type="text" id="cell" required>
+        
+      <button type="button" onclick="submitForm()">Run Function</button>
+    </form>
+    <script>
+      function submitForm() {
+        var form = document.getElementById('aiForm');
+        var functionName = form.functionName.value;
+        var modelName = form.modelName.value;
+        var text = document.getElementById('text').value;
+        var precontext = document.getElementById('precontext').value;
+        var postcontext = document.getElementById('postcontext').value;
+        var cell = document.getElementById('cell').value;
+
+        var data = {
+          functionName: functionName,
+          modelName: modelName,
+          text: text,
+          precontext: precontext,
+          postcontext: postcontext,
+          cell: cell
+        };
+
+        google.script.run.withSuccessHandler(function(response) {
+          console.log("callFunction() was successful!");
+          console.log(response);
+        }).callFunction(data);
+      }
+    </script>
+  </body>
+</html>
